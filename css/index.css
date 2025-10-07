@@ -1,0 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  width: 100%;
+  background-color: #fbfbfb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem 5rem 1.2rem 3rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ---------- 1. Logo + Avis ---------- */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 90px;
+  width: auto;
+  margin-left: 0px;
+}
+
+.avis {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ---------- 2. Menu central (poussé à droite) ---------- */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin-right: 5rem;
+}
+
+/* --- Dropdown menu --- */
+.main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu li {
+  position: relative;
+  display: inline-block;
+}
+
+.main-menu > ul > li > a {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #1a73e8;
+  color: white;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.main-menu > ul > li > a:hover {
+  background-color: #0c56c9;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-content li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background: #f2f2f2;
+}
+
+.dropdown:hover > .dropdown-content {
+  display: block;
+}
+
+/* --- Liens simples --- */
+.second-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.second-menu li a {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #1a73e8;
+  color: white;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.second-menu li a:hover {
+  background-color: #0c56c9;
+}
+
+/* ---------- 3. Espace Client ---------- */
+.nav-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 2rem;
+}
+
+.espace-client {
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #1a73e8;
+  color: white;
+  transition: background 0.3s;
+}
+
+.espace-client:hover {
+  background-color: #0c56c9;
+}
+
+/* -------- Page --------- */
+
+/* --- Section principale --- */
+.atouts {
+  background-color: #e5edef;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-top-right-radius: 150px;
+  margin-top: 3rem;
+}
+
+/* --- Titre de la section --- */
+.atouts h2 {
+  color: #ffcc00;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: left;
+  border-left: 5px solid #ffcc00;
+  padding-left: 12px;
+  margin: 0 0 3rem 8%;
+  max-width: 1200px;
+}
+
+/* --- Conteneur des cartes --- */
+.atouts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- Carte individuelle --- */
+.atout-card {
+  background-color: #1a73e8;
+  color: white;
+  border-radius: 0 60px 0 0;
+  width: 300px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Variation couleur (2e et 3e carte turquoise) --- */
+.atout-card:nth-child(2),
+.atout-card:nth-child(3) {
+  background-color: #2ea8d8;
+}
+
+/* --- Effet au survol --- */
+.atout-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Icône --- */
+.atout-card img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Titre des cartes --- */
+.atout-card h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+/* --- Texte --- */
+.atout-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --- Section Témoignages --- */
+.temoignages {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* --- Bloc contenant le widget (pleine largeur) --- */
+.avis-widget {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #f9f9f9;
+  padding: 3rem 1rem;
+  border-radius: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* --- En-tête (titre + phrase) --- */
+.temoignages-header {
+  text-align: left;
+  padding-left: 8%;
+}
+
+.temoignages-header h2 {
+  color: #ffcc00;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  border-left: 5px solid #ffcc00;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.temoignages-header p {
+  color: #555;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* --- Section Localisation --- */
+.localisation {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.localisation h2 {
+  color: #ffcc00;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  border-left: 5px solid #ffcc00;
+  padding-left: 10px;
+  display: inline-block;
+  margin-left: -1355px;
+}
+
+/* conteneur map */
+.map-container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 450px;
+  overflow: hidden;
+}
+
+/* iframe map */
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ------ Footer -------- */
+footer {
+  background: #1a73e8;
+  color: #fff;
+  padding: 3rem 2rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 1rem;
+  color: #1a73e8;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-section a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* ---------- 🧭 RESPONSIVE ---------- */
+
+/* Tablette (max-width: 992px) */
+@media (max-width: 992px) {
+  header {
+    padding: 1rem 2rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-left {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+  .nav-center {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-right: 0;
+  }
+
+  .second-menu ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-right {
+    margin-left: 0;
+  }
+
+  .main-menu > ul > li > a,
+  .second-menu li a,
+  .espace-client {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+
+  .logo img {
+    height: 70px;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-center,
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .main-menu > ul > li > a,
+  .second-menu li a,
+  .espace-client {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
