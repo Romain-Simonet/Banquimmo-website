@@ -6,6 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 /* ---------- HEADER ---------- */
@@ -164,6 +165,95 @@ header {
 }
 
 /* -------- Page --------- */
+
+/* ---------- SECTION PARTENAIRES ---------- */
+.partenaires {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.partenaires-title {
+  color: #ffcc00;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  border-left: 5px solid #ffcc00;
+  padding-left: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+/* ---------- SLIDER ---------- */
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 3rem;
+  transition: transform 0.5s ease;
+  overflow-x: auto;           /* ✅ permet le défilement horizontal */
+  scroll-behavior: smooth;    /* ✅ rend le scroll fluide */
+  scrollbar-width: none;      /* ✅ masque la barre sur Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* ✅ masque la barre sur Chrome/Safari */
+}
+
+.slide {
+  flex: 0 0 auto; /* ✅ évite que les images se compressent */
+}
+
+.slide img {
+  width: 180px;
+  height: auto;
+  filter: grayscale(0.2);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+
+/* ---------- FLECHES ---------- */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
 
 /* --- Section principale --- */
 .atouts {
@@ -462,5 +552,12 @@ footer {
     position: static;
     box-shadow: none;
     border-radius: 0;
+  }
+
+  .slide img {
+    width: 120px;
+  }
+  .slider {
+    gap: 1.5rem;
   }
 }
