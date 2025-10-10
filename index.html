@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<header>
+<header id="main-header">
   <div class="nav-container">
     <div class="nav-left">
       <a href="index.html" class="logo">
@@ -31,15 +31,15 @@
               <li><a href="#">Crédit immobilier</a></li>
               <li><a href="#">Rachat de crédit</a></li>
               <li><a href="#">Prêt travaux</a></li>
-              <li><a href="#">Assurance emprunteur</a></li>
-              <li><a href="#">Assurance</a></li>
+              <li><a href="html/borrower_insurance.html">Assurance emprunteur</a></li>
+              <li><a href="https://banquimmo.parcours.digitalcourtier.com/">Assurance</a></li>
             </ul>
           </li>
         </ul>
       </nav>
       <nav class="second-menu">
         <ul>
-          <li><a href="#">Programmes neufs</a></li>
+          <li><a href="https://www.banquimmo.immo">Programmes neufs</a></li>
           <li><a href="html/actuality.html">Actualités</a></li>
         </ul>
       </nav>
@@ -48,43 +48,104 @@
       <a href="html/client_space.html" class="espace-client">Espace Client</a>
     </div>
   </div>
-</header>
-
-<section class="partenaires">
-  <h2 class="partenaires-title">Nos partenaires</h2>
-
-  <div class="slider-container">
-    <button class="arrow left">&#10094;</button>
-
-    <div class="slider">
-      <div class="slide"><img src="pictures/parts/acf.png" alt="ACF"></div>
-      <div class="slide"><img src="pictures/parts/afi.webp" alt="AFI"></div>
-      <div class="slide"><img src="pictures/parts/agm.png" alt="agm"></div>
-      <div class="slide"><img src="pictures/parts/alptis.jpg" alt="alptis"></div>
-      <div class="slide"><img src="pictures/parts/asaf.jpg" alt="asaf"></div>
-      <div class="slide"><img src="pictures/parts/assu.jpg" alt="assu"></div>
-      <div class="slide"><img src="pictures/parts/Banque-Populaire.jpg" alt="Banque-Populaire"></div>
-      <div class="slide"><img src="pictures/parts/bnp.webp" alt="bnp"></div>
-      <div class="slide"><img src="pictures/parts/ca.png" alt="ca"></div>
-      <div class="slide"><img src="pictures/parts/ce.jpg" alt="ce"></div>
-      <div class="slide"><img src="pictures/parts/cmdt.jpg" alt="cmdt"></div>
-      <div class="slide"><img src="pictures/parts/gh.png" alt="gh"></div>
-      <div class="slide"><img src="pictures/parts/wiss.png" alt="wiss"></div>
-      <div class="slide"><img src="pictures/parts/ug.svg" alt="ug"></div>
-      <div class="slide"><img src="pictures/parts/tet.jpeg" alt="tet"></div>
-      <div class="slide"><img src="pictures/parts/spvie.avif" alt="spvie"></div>
-      <div class="slide"><img src="pictures/parts/simp.png" alt="simp"></div>
-      <div class="slide"><img src="pictures/parts/sg.jpg" alt="sg"></div>
-      <div class="slide"><img src="pictures/parts/repa.webp" alt="repa"></div>
-      <div class="slide"><img src="pictures/parts/orus.png" alt="orus"></div>
-      <div class="slide"><img src="pictures/parts/néo.jpg" alt="neo"></div>
-      <div class="slide"><img src="pictures/parts/metlif.png" alt="metlif"></div>
-      <div class="slide"><img src="pictures/parts/lcl.png" alt="lcl"></div>
-      <div class="slide"><img src="pictures/parts/ka.png" alt="ka"></div>
-      <div class="slide"><img src="pictures/parts/hm.jpg" alt="hm"></div>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
     </div>
 
-    <button class="arrow right">&#10095;</button>
+    <!-- Menu mobile -->
+    <nav class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li class="dropdown-mobile">
+          <a href="#">Nos offres ▼</a>
+          <ul class="submenu-mobile">
+            <li><a href="#">Prêt immobilier</a></li>
+            <li><a href="#">Rachat de crédit</a></li>
+            <li><a href="#">Prêt travaux</a></li>
+            <li><a href="html/borrower_insurance.html">Assurance emprunteur</a></li>
+            <li><a href="https://banquimmo.parcours.digitalcourtier.com">Assurance</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.banquimmo.immo">Programmes Neufs</a></li>
+        <li><a href="html/actuality.html">Actualités</a></li>
+        <li><a href="html/client_space.html">Espace Client</a></li>
+      </ul>
+    </nav>
+</header>
+
+<div class="header-image">
+  <img src="pictures/home2.png" alt="home">
+  <div class="header-text">
+    <h1>Les Meilleurs Taux<br>pour votre prêt immobilier sur Lyon et toute la métropole lyonnaise.</h1><br>
+  </div>
+</div><br>
+
+<section class="avis_">
+  <div class="avis-container">
+    <h2>Notre priorité<br>La satisfaction de nos clients</h2>
+
+    <div class="avis-content">
+      <div class="avis-image">
+        <img src="pictures/avis.jpg" alt="Avis client Banquimmo">
+      </div>
+      <div class="avis-texte">
+        <h3>Plus de 700 avis de clients satisfaits !</h3>
+        <p>
+          <b>Avec plus de 700 avis de clients satisfaits sur Google, Facebook et les Pages Jaunes,
+          Banquimmo est l’un des courtiers en prêts les mieux notés sur les réseaux sociaux de toute
+          la région lyonnaise.</b>
+        </p>
+        <p>
+          Cette reconnaissance est notre plus grande fierté.<br>
+          Elle est le fruit :<br>
+          - D’une méthode performante résolument orientée <b>RÉSULTATS</b>.<br>
+          - De l’investissement et du travail quotidien de tous les experts Banquimmo auprès de leurs clients.
+        </p>
+
+        <div class="avis-boutons">
+          <a href="https://www.opinionsystem.fr/en-ca/certificate/12637" target="_blank" class="btn btn-blue">
+            Partagez votre expérience avec Banquimmo !
+          </a>
+
+          <a href="html/contact.html" class="btn btn-orange">
+            Je prends rendez-vous avec un expert Banquimmo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-container">
+    <div class="about-left">
+      <h2>Qui sommes-nous ?</h2>
+
+      <div class="about-image">
+        <img src="pictures/team.jpg" alt="Équipe Banquimmo">
+        <div class="about-caption">
+          <p>Avec Banquimmo, profitez des meilleurs taux sur Lyon.</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <h3>Banquimmo<br>Courtier expert en prêts sur Lyon et l’ensemble de la métropole lyonnaise.</h3>
+      <p>
+        Face au durcissement d’octroi des crédits bancaires, il est plus que jamais indispensable
+        de s’attacher les services d’un expert en prêt immobilier pour mettre toutes les chances
+        de son côté, surtout si vous êtes un jeune ménage ou un primo-accédant.
+      </p>
+      <p>
+        Forts de leur connaissance du marché lyonnais, les experts Banquimmo vous assurent un
+        service unique pour :
+      </p>
+      <p>
+        - Présenter votre dossier dans les meilleures conditions en respectant les critères attendus par les banques,<br>
+        - Gagner un temps précieux,<br>
+        - Éviter de passer des heures à négocier avec les conseillers bancaires,<br>
+        - Profiter des meilleurs taux et des meilleures garanties.<br>
+      </p><br>
+      <a href="html/contact.html" class="btn-orange">Je fais ma demande en ligne</a>
+    </div>
   </div>
 </section>
 
@@ -118,6 +179,47 @@
   </div>
 </section>
 
+<section class="partenaires">
+  <h2 class="partenaires-title">Nos partenaires</h2>
+  <button class="arrow left">
+    <img src="pictures/left_arrow.png" alt="Flèche gauche">
+  </button>
+  <div class="slider-container">
+
+    <div class="slider">
+      <div class="slide"><img src="pictures/parts/acf.png" alt="ACF"></div>
+      <div class="slide"><img src="pictures/parts/afi.webp" alt="AFI"></div>
+      <div class="slide"><img src="pictures/parts/agm.png" alt="agm"></div>
+      <div class="slide"><img src="pictures/parts/alptis.jpg" alt="alptis"></div>
+      <div class="slide"><img src="pictures/parts/asaf.jpg" alt="asaf"></div>
+      <div class="slide"><img src="pictures/parts/assu.jpg" alt="assu"></div>
+      <div class="slide"><img src="pictures/parts/Banque-Populaire.jpg" alt="Banque-Populaire"></div>
+      <div class="slide"><img src="pictures/parts/bnp.webp" alt="bnp"></div>
+      <div class="slide"><img src="pictures/parts/ca.png" alt="ca"></div>
+      <div class="slide"><img src="pictures/parts/ce.jpg" alt="ce"></div>
+      <div class="slide"><img src="pictures/parts/cmdt.jpg" alt="cmdt"></div>
+      <div class="slide"><img src="pictures/parts/gh.png" alt="gh"></div>
+      <div class="slide"><img src="pictures/parts/wiss.png" alt="wiss"></div>
+      <div class="slide"><img src="pictures/parts/ug.svg" alt="ug"></div>
+      <div class="slide"><img src="pictures/parts/tet.jpeg" alt="tet"></div>
+      <div class="slide"><img src="pictures/parts/spvie.avif" alt="spvie"></div>
+      <div class="slide"><img src="pictures/parts/simp.png" alt="simp"></div>
+      <div class="slide"><img src="pictures/parts/sg.jpg" alt="sg"></div>
+      <div class="slide"><img src="pictures/parts/repa.webp" alt="repa"></div>
+      <div class="slide"><img src="pictures/parts/orus.png" alt="orus"></div>
+      <div class="slide"><img src="pictures/parts/néo.jpg" alt="neo"></div>
+      <div class="slide"><img src="pictures/parts/metlif.png" alt="metlif"></div>
+      <div class="slide"><img src="pictures/parts/lcl.png" alt="lcl"></div>
+      <div class="slide"><img src="pictures/parts/ka.png" alt="ka"></div>
+      <div class="slide"><img src="pictures/parts/hm.jpg" alt="hm"></div>
+    </div>
+
+  </div>
+  <button class="arrow right">
+    <img src="pictures/right_arrow.png" alt="Flèche droite">
+  </button>
+</section>
+
 <section class="temoignages">
   <div class="avis-widget">
     <div class="temoignages-header">
@@ -140,7 +242,7 @@
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
-      </iframe><br>
+      </iframe>
     </div>
   </div>
 </section>
@@ -172,8 +274,8 @@
         <li><a href="#">Prêt immobilier</a></li>
         <li><a href="#">Rachat de crédit</a></li>
         <li><a href="#">Prêt travaux</a></li>
-        <li><a href="#">Assurance emprunteur</a></li>
-        <li><a href="#">Assurance</a></li>
+        <li><a href="html/borrower_insurance.html">Assurance emprunteur</a></li>
+        <li><a href="https://banquimmo.parcours.digitalcourtier.com">Assurance</a></li>
       </ul>
     </div>
 
@@ -203,6 +305,8 @@
   </div>
 </footer>
 
+<script src="js/dropdown.js"></script>
 <script src="js/script.js"></script>
+<script src="js/burger.js"></script>
 </body>
 </html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banquimmo</title>
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+
+<header id="main-header">
+  <div class="nav-container">
+    <div class="nav-left">
+      <a href="../index.html" class="logo">
+        <img src="../pictures/banquimmo_logo.jpg" alt="Logo Banquimmo">
+      </a>
+      <div class="avis">
+        <iframe src="https://www.opinionsystem.fr/company_rating.php?company_id=12637&professional_activity_id=0&rating_key=c7aca471720f0ab88d01b3a9495d29ba&language=fr-FR&text_color=000000" 
+                scrolling="no" frameborder="0" 
+                style="border: none; overflow: hidden; height: 22px; min-width:188px;" 
+                allowTransparency="true">
+        </iframe>
+      </div>
+    </div>
+    <div class="nav-center">
+      <nav class="main-menu">
+        <ul>
+          <li class="dropdown">
+            <a href="#">Nos offres ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Crédit immobilier</a></li>
+              <li><a href="#">Rachat de crédit</a></li>
+              <li><a href="#">Prêt travaux</a></li>
+              <li><a href="borrower_insurance.html">Assurance emprunteur</a></li>
+              <li><a href="https://banquimmo.parcours.digitalcourtier.com/">Assurance</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav class="second-menu">
+        <ul>
+          <li><a href="https://www.banquimmo.immo">Programmes neufs</a></li>
+          <li><a href="actuality.html">Actualités</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <a href="client_space.html" class="espace-client">Espace Client</a>
+    </div>
+  </div>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+
+    <!-- Menu mobile -->
+    <nav class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li class="dropdown-mobile">
+          <a href="#">Nos offres ▼</a>
+          <ul class="submenu-mobile">
+            <li><a href="#">Prêt immobilier</a></li>
+            <li><a href="#">Rachat de crédit</a></li>
+            <li><a href="#">Prêt travaux</a></li>
+            <li><a href="borrower_insurance.html">Assurance emprunteur</a></li>
+            <li><a href="https://banquimmo.parcours.digitalcourtier.com">Assurance</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.banquimmo.immo">Programmes Neufs</a></li>
+        <li><a href="actuality.html">Actualités</a></li>
+        <li><a href="client_space.html">Espace Client</a></li>
+      </ul>
+    </nav>
+</header>
+
+<div class="header-image">
+  <img src="../pictures/contact.jpg" alt="newspaper">
+  <div class="header-text">
+    <h1>Quel que soit votre projet<br>
+        rien de plus simple<br>
+        que d'échanger<br>
+        quelques minutes ensemble.
+    </h1><br>
+  </div>
+</div><br>
+
+<!-- ===================== SECTION CONTACT ===================== -->
+<section class="contact-section">
+  <div class="contact-container">
+
+    <!-- Colonne gauche : formulaire -->
+    <div class="contact-left">
+      <h2>Contactez-nous</h2><br>
+
+      <form action="../php/send-mail.php" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="nom">Nom complet *</label>
+          <input type="text" id="nom" name="nom" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telephone">Téléphone *</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="Ex : 06 12 34 56 78" required>
+        </div>
+
+        <div class="form-group">
+          <label for="type_pret">Type de prêt</label>
+          <select id="type_pret" name="type_pret">
+            <option>Prêt immobilier</option>
+            <option>Rachat de crédit</option>
+            <option>Prêt travaux</option>
+            <option>Assurance emprunteur</option>
+            <option>Autre</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="montant">Montant estimé (€)</label>
+          <input type="number" id="montant" name="montant" placeholder="Ex : 250000">
+        </div>
+
+        <div class="form-group">
+          <label for="ville">Ville du bien</label>
+          <input type="text" id="ville" name="ville">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="message">Message / Détails</label>
+          <textarea id="message" name="message" rows="5" placeholder="Votre message..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-envoyer">Envoyer ma demande</button>
+      </form>
+    </div>
+
+    <!-- Colonne droite : informations -->
+    <div class="contact-right">
+      <h3>Banquimmo</h3>
+      <p>Les experts Banquimmo sont à votre entière disposition pour donner vie à votre projet immobilier.</p>
+      <p>Remplissez ce rapide formulaire et nous vous contacterons le plus rapidement possible pour fixer ensemble notre prochain rendez-vous.</p>
+
+      <div class="contact-info">
+        <p class="phone">📞 04 78 58 04 87</p>
+        <p class="address">📍 253 avenue Jean Jaurès<br>69150 Décines</p>
+        <div class="horaires">
+          <h4>Horaires</h4>
+          <p>🕘 9h00 à 19h00<br>(Lundi – Vendredi)<br>Le samedi sur rendez-vous</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>BANQUIMMO</h3>
+      <p>Ambassadeur du Label Made in Courtage.</p><br>
+      <p>Courtier en prêts immobiliers et assurances à Lyon et sa région.</p><br>
+      <p>ORIAS n°14007331 – <a href="https://www.orias.fr" target="_blank">www.orias.fr</a></p><br>
+      <p>Sous le contrôle de l’ACPR – <a href="https://acpr.banque-france.fr" target="_blank">www.acpr.banque-france.fr</a></p><br>
+    </div>
+
+    <div class="footer-section">
+      <h4>Liens utiles</h4>
+      <ul>
+        <li><a href="legal_mention.html">Mentions légales</a></li>
+        <li><a href="confidentiality_politic.html">Politique de confidentialité</a></li>
+        <li><a href="inter_register.html">Registre unique des intermédiaires (assurance, banque, finance)</a></li>
+        <li><a href="mailto:contact@banquimmo.fr?subject=Résiliation%20de%20contrat">Résilier votre contrat</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Nos offres</h4>
+      <ul>
+        <li><a href="#">Prêt immobilier</a></li>
+        <li><a href="#">Rachat de crédit</a></li>
+        <li><a href="#">Prêt travaux</a></li>
+        <li><a href="#">Assurance emprunteur</a></li>
+        <li><a href="https://banquimmo.parcours.digitalcourtier.com">Assurance</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>253 avenue Jean Jaurès<br>69150 Décines</p>
+      <p>📞 <a href="tel:+33478580487">04 78 58 04 87</a></p>
+      <p>📧 <a href="mailto:contact@banquimmo.fr">contact@banquimmo.fr</a></p>
+      <p>Horaires :</p>
+      <p>Lun-Ven 9h-19h – Samedi sur RDV</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Suivez-nous</h4>
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/banquimmo/" target="_blank">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/company/banquimmolyon/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/channel/UCeHQWq3tM7MpHAwY2gc2FHA" target="_blank">YouTube</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 Banquimmo – Courtier en Prêts Particuliers et Professionnels</p>
+    <p>Avec Banquimmo, obtenez les Meilleurs Taux et Conditions sur Lyon et sa région.</p>
+  </div>
+</footer>
+
+<script src="../js/dropdown.js"></script>
+<script src="../js/burger.js"></script>
+<script src="../js/script.js"></script>
+
+</body>
+</html>
