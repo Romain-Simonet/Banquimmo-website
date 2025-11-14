@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Banquimmo • Espace Client</title>
+  <meta name="description" content="Accédez à l'espace client Banquimmo pour suivre votre dossier et échanger des documents en toute sécurité." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial }</style>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-white text-gray-900">
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="flex items-center justify-between py-4">
+        <a href="index.html#accueil" class="flex items-center gap-2">
+            <img src="images/banquimmo_logo.jpg" alt="Banquimmo" class="h-10 w-auto object-contain" />
+          <div class="font-semibold text-lg md:text-xl tracking-tight">Banquimmo</div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html#expertises" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Expertises</a>
+          <a href="index.html#methode" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Méthode</a>
+          <a href="index.html#avis" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Avis</a>
+          <a href="index.html#faq" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Faq</a>
+          <a href="https://banquimmo.parcours.digitalcourtier.com/" title="Lien assurances à compléter" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Assurances</a>
+          <a href="actualites.html" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Actualités</a>
+          <a href="index.html#contact" class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
+            Prendre RDV <i data-lucide="calendar" class="h-4 w-4"></i>
+          </a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-gray-200 p-2" aria-label="Ouvrir le menu">
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <div id="mobileMenu" class="md:hidden pb-4 hidden">
+        <div class="grid gap-3">
+          <a href="index.html#expertises" class="rounded-xl px-3 py-2 hover:bg-gray-50">Expertises</a>
+          <a href="index.html#methode" class="rounded-xl px-3 py-2 hover:bg-gray-50">Méthode</a>
+          <a href="index.html#avis" class="rounded-xl px-3 py-2 hover:bg-gray-50">Avis</a>
+          <a href="index.html#faq" class="rounded-xl px-3 py-2 hover:bg-gray-50">Faq</a>
+          <a href="https://banquimmo.parcours.digitalcourtier.com" title="Lien assurances à compléter" class="rounded-xl px-3 py-2 hover:bg-gray-50">Assurances</a>
+          <a href="actualites.html" class="rounded-xl px-3 py-2 hover:bg-gray-50">Actualités</a>
+          <a href="index.html#contact" class="rounded-xl px-3 py-2 hover:bg-blue-50 text-blue-700">Prendre RDV</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-blue-50 via-white to-white"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 items-end gap-8">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-semibold leading-tight">Espace Client</h1>
+          <p class="mt-3 text-gray-600">Accédez à votre dossier, échangez des pièces et suivez l’avancement en temps réel.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-100 bg-white p-4 md:p-6">
+          <div class="text-sm text-gray-600">Sécurisé • Disponible 24/7 • Hébergé en UE</div>
+        </div>
+      </div>
+      <div class="mt-10 rounded-3xl border border-gray-100 bg-white p-6 md:p-8">
+        <div id="actelo-espace-client"></div>
+        <script type="text/javascript" src="https://banquimmo.actelo.app/espace-client.js" async=""></script>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-10">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2">
+            <div class="h-9 w-9 rounded-2xl bg-blue-600 grid place-items-center">
+              <i data-lucide="home" class="h-5 w-5 text-white"></i>
+            </div>
+            <div class="font-semibold text-lg">Banquimmo</div>
+          </div>
+          <p class="mt-3 text-sm text-gray-600">Courtier indépendant : prêts, assurance emprunteur et financements professionnels.</p>
+        </div>
+        <div>
+          <div class="font-semibold">Navigation</div>
+          <ul class="mt-3 space-y-2 text-sm text-gray-600">
+            <li><a href="index.html#expertises" class="hover:text-gray-900">Nos expertises</a></li>
+            <li><a href="index.html#methode" class="hover:text-gray-900">Notre méthode</a></li>
+            <li><a href="actualites.html" class="hover:text-gray-900">Actualités</a></li>
+            <li><a href="https://banquimmo.parcours.digitalcourtier.com" title="Lien assurances à compléter" class="hover:text-gray-900">Assurances</a></li>
+            <li><a href="mentions.html" class="hover:text-gray-900">Mentions légales</a></li>
+            <li><a href="confidentialite.html" class="hover:text-gray-900">Politique de condifentialité</a></li>
+            <li><a href="inter_register.html" class="hover:text-gray-900">Garanties du Registre unique des intermédiaires en assurance, banque et finance</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold">Nous contacter</div>
+          <ul class="mt-3 space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><i data-lucide="phone" class="h-4 w-4"></i> +33(0) 4 78 58 04 87</li>
+            <li class="flex items-center gap-2"><i data-lucide="mail" class="h-4 w-4"></i> contact@banquimmo.fr</li>
+            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="h-4 w-4"></i>253 Av. Jean Jaurès, 69150 Décines-Charpieu, France</li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold">Prendre rendez-vous</div>
+          <p class="mt-3 text-sm text-gray-600">Nous sommes la pour vous conseillez</p>
+          <a href="index.html#contact" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
+            Prendre RDV <i data-lucide="calendar" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+      <div class="mt-10 text-xs text-gray-500">© <span id="year"></span> Banquimmo. Tous droits réservés.</div>
+    </div>
+  </footer>
+
+  <div id="cookie" class="fixed bottom-4 inset-x-0 px-4 hidden">
+    <div class="max-w-4xl mx-auto rounded-2xl border border-gray-200 bg-white shadow-lg p-4">
+      <div class="md:flex items-center justify-between gap-4">
+        <div class="text-sm text-gray-700">
+          Nous utilisons des cookies techniques pour améliorer votre expérience. Aucune publicité ici. Consultez nos mentions pour en savoir plus.
+        </div>
+        <div class="mt-3 md:mt-0 flex items-center gap-2">
+          <button id="cookieAccept" class="rounded-xl bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">J'accepte</button>
+          <a href="mentions.html#cookies" class="rounded-xl border border-gray-200 px-4 py-2 hover:bg-gray-50">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="assets/app.js" defer></script>
+
+</body>
+</html>

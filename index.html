@@ -1,312 +1,479 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Banquimmo</title>
-  <link rel="stylesheet" href="css/index.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Banquimmo • Courtier en prêts & assurance emprunteur</title>
+  <meta name="description" content="Banquimmo – agence de courtage en prêts immobiliers, rachat de crédit et assurance emprunteur. Étude gratuite, réponse rapide, accompagnement jusqu'à la signature." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial }</style>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="min-h-screen bg-white text-gray-900">
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="flex items-center justify-between py-4">
+        <a href="index.html#accueil" class="flex items-center gap-2">
+          <img src="images/banquimmo_logo.jpg" alt="Banquimmo" class="h-10 w-auto object-contain" />
+          <div class="font-semibold text-lg md:text-xl tracking-tight">Banquimmo</div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html#expertises" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Expertises</a>
+          <a href="index.html#methode" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Méthode</a>
+          <a href="index.html#avis" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Avis</a>
+          <a href="index.html#faq" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Faq</a>
+          <a href="https://banquimmo.parcours.digitalcourtier.com/" title="Lien assurances à compléter" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Assurances</a>
+          <a href="actualites.html" class="text-sm md:text-base text-gray-700 hover:text-gray-900">Actualités</a>
+          <a href="espace-client.html" class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2 text-white shadow-sm hover:bg-blue-700">
+            <i data-lucide="user" class="h-4 w-4"></i> Espace Client
+          </a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-gray-200 p-2" aria-label="Ouvrir le menu">
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <div id="mobileMenu" class="md:hidden pb-4 hidden">
+        <div class="grid gap-3">
+          <a href="index.html#expertises" class="rounded-xl px-3 py-2 hover:bg-gray-50">Expertises</a>
+          <a href="index.html#methode" class="rounded-xl px-3 py-2 hover:bg-gray-50">Méthode</a>
+          <a href="index.html#avis" class="rounded-xl px-3 py-2 hover:bg-gray-50">Avis</a>
+          <a href="index.html#faq" class="rounded-xl px-3 py-2 hover:bg-gray-50">Faq</a>
+          <a href="https://banquimmo.parcours.digitalcourtier.com" title="Lien assurances à compléter" class="rounded-xl px-3 py-2 hover:bg-gray-50">Assurances</a>
+          <a href="actualites.html" class="rounded-xl px-3 py-2 hover:bg-gray-50">Actualités</a>
+          <a href="espace-client.html" class="rounded-xl px-3 py-2 hover:bg-blue-50 text-blue-700">Espace Client<i data-lucide="user" class="h-4 w-4"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<header id="main-header">
-  <div class="nav-container">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="pictures/banquimmo_logo.jpg" alt="Logo Banquimmo">
+  <section id="accueil" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-blue-50 via-white to-white"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 items-center gap-12">
+        <div>
+          <span class="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-600/20">Agence de courtage en prêt & assurance</span>
+          <h1 class="mt-4 text-4xl md:text-5xl font-semibold leading-tight">
+            Financez vos projets au meilleur <span class="text-blue-600">taux</span> avec Banquimmo
+          </h1>
+          <p class="mt-4 text-lg text-gray-600">
+            Nous négocions pour vous les conditions les plus avantageuses : taux, assurance, garanties et frais. Un interlocuteur unique jusqu'à la signature.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="simulateur.html" class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-white shadow-sm hover:bg-blue-700">
+              <i data-lucide="calculator" class="h-5 w-5"></i> Simuler ma mensualité
+            </a>
+            <a href="#expertises" class="inline-flex items-center gap-2 rounded-xl border border-gray-200 px-5 py-3 hover:bg-gray-50">
+              Découvrir nos services <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
+          </div>
+          <div class="mt-6 flex items-center gap-4 text-sm text-gray-600">
+            <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-blue-600"></i> Démarche sans engagement</div>
+            <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-blue-600"></i> Réponse rapide</div>
+          </div>
+        </div>
+        <!-- HERO – collage photo -->
+        <div class="relative">
+          <div class="absolute -inset-6 -z-10 bg-blue-100/50 blur-2xl rounded-[2rem]"></div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <!-- Photo 1 -->
+            <img src="images/hero-couple-keys.jpg" alt="Remise des clés"
+                class="h-56 md:h-64 w-full object-cover rounded-3xl border border-gray-100 shadow-sm" loading="lazy">
+            <!-- Photo 2 -->
+            <img src="images/hero-advisor.jpg" alt="Conseiller qui explique une offre de prêt"
+                class="h-56 md:h-64 w-full object-cover rounded-3xl border border-gray-100 shadow-sm" loading="lazy">
+            <!-- Photo 3 large -->
+            <img src="images/hero-building.jpg" alt="Immeuble résidentiel moderne"
+                class="col-span-2 h-56 md:h-64 w-full object-cover rounded-3xl border border-gray-100 shadow-sm" loading="lazy">
+          </div>
+
+          <!-- Avertissement -->
+          <div class="mt-10 rounded-2xl bg-gray-50 p-4 text-sm text-gray-600 border border-gray-100">
+            <div class="font-medium text-gray-800">Avertissement :</div>
+            Les exemples de financement et d'assurance présentés sont indicatifs et non contractuels. Sous réserve d'acceptation par nos partenaires.
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <section id="expertises" class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="md:flex md:items-end md:justify-between">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-semibold">Nos expertises</h2>
+        <p class="mt-3 text-gray-600">Un accompagnement complet, transparent et orienté résultat.</p>
+      </div>
+      <a href="#contact" class="mt-4 md:mt-0 inline-flex items-center gap-2 rounded-xl border border-gray-200 px-4 py-2 hover:bg-gray-50">
+        Prendre RDV <i data-lucide="calendar" class="h-4 w-4"></i>
       </a>
-      <div class="avis">
-        <iframe src="https://www.opinionsystem.fr/company_rating.php?company_id=12637&professional_activity_id=0&rating_key=c7aca471720f0ab88d01b3a9495d29ba&language=fr-FR&text_color=000000" 
-                scrolling="no" frameborder="0" 
-                style="border: none; overflow: hidden; height: 22px; min-width:188px;" 
-                allowTransparency="true">
-        </iframe>
-      </div>
-    </div>
-    <div class="nav-center">
-      <nav class="main-menu">
-        <ul>
-          <li class="dropdown">
-            <a href="#">Nos offres ▼</a>
-            <ul class="dropdown-content">
-              <li><a href="#">Crédit immobilier</a></li>
-              <li><a href="#">Rachat de crédit</a></li>
-              <li><a href="#">Prêt travaux</a></li>
-              <li><a href="html/borrower_insurance.html">Assurance emprunteur</a></li>
-              <li><a href="https://banquimmo.parcours.digitalcourtier.com/">Assurance</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <nav class="second-menu">
-        <ul>
-          <li><a href="https://www.banquimmo.immo">Programmes neufs</a></li>
-          <li><a href="html/actuality.html">Actualités</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="nav-right">
-      <a href="html/client_space.html" class="espace-client">Espace Client</a>
-    </div>
-  </div>
-    <div class="burger" id="burger">
-      <span></span><span></span><span></span>
     </div>
 
-    <!-- Menu mobile -->
-    <nav class="mobile-menu" id="mobile-menu">
-      <ul>
-        <li class="dropdown-mobile">
-          <a href="#">Nos offres ▼</a>
-          <ul class="submenu-mobile">
-            <li><a href="#">Prêt immobilier</a></li>
-            <li><a href="#">Rachat de crédit</a></li>
-            <li><a href="#">Prêt travaux</a></li>
-            <li><a href="html/borrower_insurance.html">Assurance emprunteur</a></li>
-            <li><a href="https://banquimmo.parcours.digitalcourtier.com">Assurance</a></li>
+        <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="rounded-3xl border border-gray-100 p-6 hover:shadow-sm">
+        <i data-lucide="home" class="h-7 w-7 text-blue-600"></i>
+        <div class="mt-3 font-semibold">Prêt immobilier</div>
+        <div class="mt-1 text-sm text-gray-600">Résidence principale, secondaire, investissement locatif.</div>
+        <div class="mt-4 text-sm text-gray-500">⚑ Conseil indépendant • Mise en concurrence • Négociation</div>
+      </div>
+
+      <div class="rounded-3xl border border-gray-100 p-6 hover:shadow-sm">
+        <i data-lucide="piggy-bank" class="h-7 w-7 text-blue-600"></i>
+        <div class="mt-3 font-semibold">Rachat & regroupement</div>
+        <div class="mt-1 text-sm text-gray-600">Renégociation de taux, regroupement de dettes.</div>
+        <div class="mt-4 text-sm text-gray-500">⚑ Baisse de mensualité • Horizon adapté</div>
+      </div>
+
+      <!-- Nouvelle carte cliquable -->
+      <a href="assurance_emprunteur.html"
+        class="rounded-3xl border border-blue-200 p-6 hover:shadow-sm bg-blue-50/40 transition h-full block">
+        <i data-lucide="shield-check" class="h-7 w-7 text-blue-700"></i>
+        <div class="mt-3 font-semibold text-blue-900">Assurance emprunteur</div>
+        <div class="mt-1 text-sm text-blue-900/80">Conformité loi Lemoine, garanties équivalentes moins chères.</div>
+        <div class="mt-4 text-sm text-blue-700 inline-flex items-center gap-2">
+          ⚑ Délégation • Économies annuelles
+          <i data-lucide="arrow-right" class="h-4 w-4"></i>
+        </div>
+      </a>
+
+      <a href="simulateur.html"
+        class="rounded-3xl border border-blue-200 p-6 hover:shadow-sm bg-blue-50/40 transition h-full block">
+        <i data-lucide="trending-up" class="h-7 w-7 text-blue-700"></i>
+        <div class="mt-3 font-semibold text-blue-900">Capacité d’emprunt</div>
+        <div class="mt-1 text-sm text-blue-900/80">Calculez votre budget réaliste selon vos revenus et charges.</div>
+        <div class="mt-4 text-sm text-blue-700 inline-flex items-center gap-2">
+          Estimer maintenant <i data-lucide="arrow-right" class="h-4 w-4"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <section id="methode" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <h2 class="text-3xl md:text-4xl font-semibold">Notre méthode</h2>
+      <p class="mt-3 text-gray-600">Simple, efficace, et centrée sur vos intérêts.</p>
+      <div class="mt-10 grid md:grid-cols-4 gap-6">
+        <div class="relative rounded-3xl bg-white border border-gray-100 p-6">
+          <div class="absolute -top-3 -left-3 rounded-2xl bg-blue-600 text-white text-sm font-semibold px-3 py-1 shadow">1</div>
+          <div class="font-semibold">Découverte</div>
+          <div class="mt-1 text-sm text-gray-600">On clarifie votre projet, votre budget et vos objectifs (1h à 1h30).</div>
+        </div>
+        <div class="relative rounded-3xl bg-white border border-gray-100 p-6">
+          <div class="absolute -top-3 -left-3 rounded-2xl bg-blue-600 text-white text-sm font-semibold px-3 py-1 shadow">2</div>
+          <div class="font-semibold">Montage du dossier</div>
+          <div class="mt-1 text-sm text-gray-600">Nous constituons un dossier solide pour maximiser l'accord des banques.</div>
+        </div>
+        <div class="relative rounded-3xl bg-white border border-gray-100 p-6">
+          <div class="absolute -top-3 -left-3 rounded-2xl bg-blue-600 text-white text-sm font-semibold px-3 py-1 shadow">3</div>
+          <div class="font-semibold">Mise en concurrence</div>
+          <div class="mt-1 text-sm text-gray-600">Nous négocions taux, assurance, garanties et frais auprès de nos partenaires.</div>
+        </div>
+        <div class="relative rounded-3xl bg-white border border-gray-100 p-6">
+          <div class="absolute -top-3 -left-3 rounded-2xl bg-blue-600 text-white text-sm font-semibold px-3 py-1 shadow">4</div>
+          <div class="font-semibold">Signature & suivi</div>
+          <div class="mt-1 text-sm text-gray-600">Nous restons à vos côtés jusqu'au déblocage des fonds et après.</div>
+        </div>
+      </div>
+      <div class="mt-8 rounded-3xl border border-gray-200 bg-white p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-gray-700">
+          <div class="font-semibold">Prêt à démarrer ?</div>
+          <div class="text-sm text-gray-600">Obtenez une pré-études gratuite et sans engagement.</div>
+        </div>
+        <a href="#contact" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
+            Prendre RDV <i data-lucide="calendar" class="h-4 w-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="avis" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <h2 class="text-3xl md:text-4xl font-semibold">Ils nous font confiance</h2>
+      <p class="mt-3 text-gray-600">Des clients satisfaits partout en France.</p>
+      <script defer async src='https://cdn.trustindex.io/loader.js?f9f63124903f8827a557510372'></script>
+    </div>
+  </section>
+
+  <section id="faq" class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <h2 class="text-3xl md:text-4xl font-semibold">Questions fréquentes</h2>
+    <p class="mt-2 text-gray-600">Réponses claires aux questions que l’on nous pose le plus souvent.</p>
+
+    <div class="mt-8 grid lg:grid-cols-12 gap-8 items-stretch">
+      <!-- IMAGE À GAUCHE -->
+      <div class="lg:col-span-5">
+        <div class="relative overflow-hidden rounded-3xl border border-gray-100 shadow-sm h-full">
+          <!-- Remplace l’URL par ton image locale si tu veux : images/faq_conseiller.jpg -->
+          <img
+            src="https://images.pexels.com/photos/8292854/pexels-photo-8292854.jpeg?w=1600&auto=compress&cs=tinysrgb"
+            alt="Échange avec un conseiller Banquimmo"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          >
+          <!-- Badge -->
+          <div class="absolute left-4 bottom-4 rounded-xl bg-white/90 backdrop-blur px-4 py-3 shadow border border-gray-100">
+            <div class="text-sm font-medium text-gray-900">Besoin d’aide ?</div>
+            <div class="text-xs text-gray-600">Nos conseillers répondent sous 48h.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ À DROITE -->
+      <div class="lg:col-span-7">
+        <div class="h-full rounded-3xl border border-gray-100 bg-white p-4 md:p-6 shadow-sm flex flex-col">
+          <div class="divide-y divide-gray-100">
+            <!-- Q1 -->
+            <details class="group py-4">
+              <summary class="flex cursor-pointer list-none items-center justify-between">
+                <span class="font-medium text-gray-900">Combien coûte un courtier Banquimmo ?</span>
+                <i data-lucide="chevron-right" class="h-5 w-5 shrink-0 transition-transform group-open:rotate-90"></i>
+              </summary>
+              <p class="mt-3 text-gray-600">Honoraires transparents, annoncés avant mission et dus uniquement en cas de succès.</p>
+            </details>
+            <!-- Q2 -->
+            <details class="group py-4">
+              <summary class="flex cursor-pointer list-none items-center justify-between">
+                <span class="font-medium text-gray-900">La délégation d’assurance est-elle possible ?</span>
+                <i data-lucide="chevron-right" class="h-5 w-5 shrink-0 transition-transform group-open:rotate-90"></i>
+              </summary>
+              <p class="mt-3 text-gray-600">Oui. Nous comparons plusieurs assureurs pour des garanties équivalentes à celles exigées par la banque, souvent à un meilleur tarif. Dès l'édition du pret</p>
+            </details>
+            <!-- Q3 -->
+            <details class="group py-4">
+              <summary class="flex cursor-pointer list-none items-center justify-between">
+                <span class="font-medium text-gray-900">En combien de temps puis-je obtenir une réponse ?</span>
+                <i data-lucide="chevron-right" class="h-5 w-5 shrink-0 transition-transform group-open:rotate-90"></i>
+              </summary>
+              <p class="mt-3 text-gray-600">Selon le dossier et la période, de 48h à quelques semaines. On vous tient informé à chaque étape.</p>
+            </details>
+            <!-- Q4 -->
+            <details class="group py-4">
+              <summary class="flex cursor-pointer list-none items-center justify-between">
+                <span class="font-medium text-gray-900">Travaillez-vous à distance ?</span>
+                <i data-lucide="chevron-right" class="h-5 w-5 shrink-0 transition-transform group-open:rotate-90"></i>
+              </summary>
+              <p class="mt-3 text-gray-600">Oui, en visio, téléphone ou en agence. Nous accompagnons des clients partout en France.</p>
+            </details>
+            <!-- Q5 (nouvelle) -->
+            <details class="group py-4">
+              <summary class="flex cursor-pointer list-none items-center justify-between">
+                <span class="font-medium text-gray-900">Quel est le taux d’endettement conseillé ?</span>
+                <i data-lucide="chevron-right" class="h-5 w-5 shrink-0 transition-transform group-open:rotate-90"></i>
+              </summary>
+              <p class="mt-3 text-gray-600">En pratique, on vise souvent ~35&nbsp;% d’effort. Cela dépend de vos revenus, de votre reste à vivre et de votre profil.</p>
+            </details>
+            <!-- Q6 (nouvelle) -->
+            <details class="group py-4">
+              <summary class="flex cursor-pointer list-none items-center justify-between">
+                <span class="font-medium text-gray-900">Quels documents prévoir pour démarrer ?</span>
+                <i data-lucide="chevron-right" class="h-5 w-5 shrink-0 transition-transform group-open:rotate-90"></i>
+              </summary>
+              <ul class="mt-3 text-gray-600 list-disc pl-5 space-y-1">
+                <li>Pièces d’identité, justificatifs de domicile</li>
+                <li>Revenus (fiches de paie, avis d’imposition)</li>
+                <li>Relevés de comptes récents</li>
+                <li>Projet (compromis, devis, plan de financement…)</li>
+              </ul>
+            </details>
+            <!-- Q7 (nouvelle) -->
+            <details class="group py-4">
+              <summary class="flex cursor-pointer list-none items-center justify-between">
+                <span class="font-medium text-gray-900">Puis-je rembourser par anticipation ?</span>
+                <i data-lucide="chevron-right" class="h-5 w-5 shrink-0 transition-transform group-open:rotate-90"></i>
+              </summary>
+              <p class="mt-3 text-gray-600">Souvent oui, totalement ou partiellement. Des indemnités peuvent s’appliquer selon l’offre de prêt. On vous aide à vérifier.</p>
+            </details>
+            <!-- Q8 (nouvelle) -->
+            <details class="group py-4">
+              <summary class="flex cursor-pointer list-none items-center justify-between">
+                <span class="font-medium text-gray-900">L’assurance emprunteur est-elle obligatoire ?</span>
+                <i data-lucide="chevron-right" class="h-5 w-5 shrink-0 transition-transform group-open:rotate-90"></i>
+              </summary>
+              <p class="mt-3 text-gray-600">Non, mais elle est généralement exigée par les banques pour accorder le financement.</p>
+            </details>
+          </div>
+
+          <!-- BAS DE CARTE (pousse en bas grâce à flex-col + mt-auto) -->
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <div class="text-sm text-gray-600">Toujours une question&nbsp;?</div>
+            <a href="index.html#contact" class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
+              Nous contacter
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-semibold">Contact & rendez-vous</h2>
+          <p class="mt-3 text-gray-600">Parlez-nous de votre projet, on vous rappelle rapidement.</p>
+
+          <div class="mt-6 grid sm:grid-cols-2 gap-4">
+            <a href="tel:+33000000000" class="rounded-2xl border border-gray-200 p-4 hover:bg-white">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-xl bg-blue-100 grid place-items-center">
+                  <i data-lucide="phone" class="h-5 w-5 text-blue-700"></i>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-600">Téléphone</div>
+                  <div class="font-medium">+33(0) 4 78 58 04 87</div>
+                </div>
+              </div>
+            </a>
+            <a href="mailto:contact@banquimmo.fr" class="rounded-2xl border border-gray-200 p-4 hover:bg-white">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-xl bg-blue-100 grid place-items-center">
+                  <i data-lucide="mail" class="h-5 w-5 text-blue-700"></i>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-600">Email</div>
+                  <div class="font-medium">contact@banquimmo.fr</div>
+                </div>
+              </div>
+            </a>
+            <div class="rounded-2xl border border-gray-200 p-4">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-xl bg-blue-100 grid place-items-center">
+                  <i data-lucide="map-pin" class="h-5 w-5 text-blue-700"></i>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-600">Adresse</div>
+                  <div class="font-medium">253 Av. Jean Jaurès, 69150 Décines-Charpieu, France</div>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-2xl border border-gray-200 p-4">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-xl bg-blue-100 grid place-items-center">
+                  <i data-lucide="file-text" class="h-5 w-5 text-blue-700"></i>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-600">Infos légales</div>
+                  <div class="font-medium">SIREN 808 102 040</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-2xl overflow-hidden border border-gray-200">
+            <div class="relative w-full rounded-2xl overflow-hidden pb-[56.25%]">
+              <iframe
+                class="absolute inset-0 w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.0041682977167!2d4.960384077100425!3d45.77110671290772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c733a342f4ef%3A0xbb71f41cc409d367!2sBanquimmo%20votre%20courtier!5e0!3m2!1sfr!2sfr!4v1760434381192!5m2!1sfr!2sfr"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
+          <form id="contactForm" class="grid gap-4">
+            <div class="grid gap-1">
+              <label class="text-sm text-gray-700">Nom complet</label>
+              <input name="name" required class="rounded-xl border border-gray-200 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500" placeholder="Jean Dupont" />
+            </div>
+            <div class="grid gap-1">
+              <label class="text-sm text-gray-700">Email</label>
+              <input type="email" name="email" required class="rounded-xl border border-gray-200 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500" placeholder="vous@exemple.com" />
+            </div>
+            <div class="grid gap-1">
+              <label class="text-sm text-gray-700">Téléphone</label>
+              <input type="tel" name="phone" class="rounded-xl border border-gray-200 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500" placeholder="+33..." />
+            </div>
+            <div class="grid gap-1">
+              <label class="text-sm text-gray-700">Type de projet</label>
+              <select name="project" class="rounded-xl border border-gray-200 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500">
+                <option>Prêt immobilier</option>
+                <option>Rachat / Renégociation</option>
+                <option>Assurance emprunteur</option>
+              </select>
+            </div>
+            <div class="grid gap-1">
+              <label class="text-sm text-gray-700">Message</label>
+              <textarea name="message" rows="4" class="rounded-xl border border-gray-200 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500" placeholder="Dites-nous en plus..."></textarea>
+            </div>
+            <label class="flex items-start gap-2 text-sm text-gray-600">
+              <input required type="checkbox" class="mt-1" />
+              <span>J'accepte d'être contacté(e) par Banquimmo. Mes données ne seront utilisées que pour répondre à ma demande (RGPD).</span>
+            </label>
+            <button type="submit" class="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-white hover:bg-blue-700">
+              Envoyer ma demande <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-50 border-y border-blue-100">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-sm text-blue-900">⚡ Estimez votre mensualité en 30 secondes (simulation indicative)</p>
+      <a href="simulateur.html" class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
+        Ouvrir le simulateur <i data-lucide="arrow-right" class="h-4 w-4"></i>
+      </a>
+    </div>
+  </section>
+
+  <footer class="border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-10">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2">
+            <div class="h-9 w-9 rounded-2xl bg-blue-600 grid place-items-center">
+              <i data-lucide="home" class="h-5 w-5 text-white"></i>
+            </div>
+            <div class="font-semibold text-lg">Banquimmo</div>
+          </div>
+          <p class="mt-3 text-sm text-gray-600">Courtier indépendant : prêts, assurance emprunteur et financements professionnels.</p>
+        </div>
+        <div>
+          <div class="font-semibold">Navigation</div>
+          <ul class="mt-3 space-y-2 text-sm text-gray-600">
+            <li><a href="index.html#expertises" class="hover:text-gray-900">Nos expertises</a></li>
+            <li><a href="index.html#methode" class="hover:text-gray-900">Notre méthode</a></li>
+            <li><a href="actualites.html" class="hover:text-gray-900">Actualités</a></li>
+            <li><a href="https://banquimmo.parcours.digitalcourtier.com" class="hover:text-gray-900">Assurances</a></li>
+            <li><a href="mentions.html" class="hover:text-gray-900">Mentions légales</a></li>
+            <li><a href="confidentialite.html" class="hover:text-gray-900">Politique de condifentialité</a></li>
+            <li><a href="inter_register.html" class="hover:text-gray-900">Garanties du Registre unique des intermédiaires en assurance, banque et finance</a></li>
           </ul>
-        </li>
-        <li><a href="https://www.banquimmo.immo">Programmes Neufs</a></li>
-        <li><a href="html/actuality.html">Actualités</a></li>
-        <li><a href="html/client_space.html">Espace Client</a></li>
-      </ul>
-    </nav>
-</header>
-
-<div class="header-image">
-  <img src="pictures/home2.png" alt="home">
-  <div class="header-text">
-    <h1>Les Meilleurs Taux<br>pour votre prêt immobilier sur Lyon et toute la métropole lyonnaise.</h1><br>
-  </div>
-</div><br>
-
-<section class="avis_">
-  <div class="avis-container">
-    <h2>Notre priorité<br>La satisfaction de nos clients</h2>
-
-    <div class="avis-content">
-      <div class="avis-image">
-        <img src="pictures/avis.jpg" alt="Avis client Banquimmo">
-      </div>
-      <div class="avis-texte">
-        <h3>Plus de 700 avis de clients satisfaits !</h3>
-        <p>
-          <b>Avec plus de 700 avis de clients satisfaits sur Google, Facebook et les Pages Jaunes,
-          Banquimmo est l’un des courtiers en prêts les mieux notés sur les réseaux sociaux de toute
-          la région lyonnaise.</b>
-        </p>
-        <p>
-          Cette reconnaissance est notre plus grande fierté.<br>
-          Elle est le fruit :<br>
-          - D’une méthode performante résolument orientée <b>RÉSULTATS</b>.<br>
-          - De l’investissement et du travail quotidien de tous les experts Banquimmo auprès de leurs clients.
-        </p>
-
-        <div class="avis-boutons">
-          <a href="https://www.opinionsystem.fr/en-ca/certificate/12637" target="_blank" class="btn btn-blue">
-            Partagez votre expérience avec Banquimmo !
-          </a>
-
-          <a href="html/contact.html" class="btn btn-orange">
-            Je prends rendez-vous avec un expert Banquimmo
+        </div>
+        <div>
+          <div class="font-semibold">Nous contacter</div>
+          <ul class="mt-3 space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><i data-lucide="phone" class="h-4 w-4"></i> +33(0) 4 78 58 04 87</li>
+            <li class="flex items-center gap-2"><i data-lucide="mail" class="h-4 w-4"></i> contact@banquimmo.fr</li>
+            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="h-4 w-4"></i>253 Av. Jean Jaurès, 69150 Décines-Charpieu, France</li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold">Accès client</div>
+          <p class="mt-3 text-sm text-gray-600">Suivez votre dossier en ligne 24/7.</p>
+          <a href="espace-client.html" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
+            <i data-lucide="user" class="h-4 w-4"></i> Espace Client
           </a>
         </div>
       </div>
+      <div class="mt-10 text-xs text-gray-500">© <span id="year"></span> Banquimmo. Tous droits réservés.</div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section class="about">
-  <div class="about-container">
-    <div class="about-left">
-      <h2>Qui sommes-nous ?</h2>
+  <script id="partoo-messaging-widget" type="module" src="https://cdn.partoo.co/widget/prod/latest.js" data-token="ab13a3c5-c68b-464e-8be4-80c1c432eafa" data-icon="message_logo_icon" data-color="#FFAA01" data-policy-url="https://app.partoo.co/privacy/messaging/c934bd37-f4db-44d8-84f5-6c86c5ef00dc?lang=fr" data-country="FR"></script>
 
-      <div class="about-image">
-        <img src="pictures/team.jpg" alt="Équipe Banquimmo">
-        <div class="about-caption">
-          <p>Avec Banquimmo, profitez des meilleurs taux sur Lyon.</p>
-        </div>
-      </div>
-    </div>
-    <div class="about-right">
-      <h3>Banquimmo<br>Courtier expert en prêts sur Lyon et l’ensemble de la métropole lyonnaise.</h3>
-      <p>
-        Face au durcissement d’octroi des crédits bancaires, il est plus que jamais indispensable
-        de s’attacher les services d’un expert en prêt immobilier pour mettre toutes les chances
-        de son côté, surtout si vous êtes un jeune ménage ou un primo-accédant.
-      </p>
-      <p>
-        Forts de leur connaissance du marché lyonnais, les experts Banquimmo vous assurent un
-        service unique pour :
-      </p>
-      <p>
-        - Présenter votre dossier dans les meilleures conditions en respectant les critères attendus par les banques,<br>
-        - Gagner un temps précieux,<br>
-        - Éviter de passer des heures à négocier avec les conseillers bancaires,<br>
-        - Profiter des meilleurs taux et des meilleures garanties.<br>
-      </p><br>
-      <a href="html/contact.html" class="btn-orange">Je fais ma demande en ligne</a>
-    </div>
-  </div>
-</section>
-
-<section class="atouts">
-  <h2>Nos atouts</h2>
-
-  <div class="atouts-container">
-    <div class="atout-card">
-      <img src="pictures/first.png" alt="Icône sécurité">
-      <h3>SÉCURITÉ</h3>
-      <p>Banquimmo est membre du Label Made in Courtage.<br>La référence du courtage en France.<br>L’assurance d’un service de qualité et sur mesure dans le respect de vos intérêts.</p>
-    </div>
-
-    <div class="atout-card">
-      <img src="pictures/seconde.png" alt="Icône simplicité">
-      <h3>SIMPLICITÉ</h3>
-      <p>Banquimmo se charge de toutes les étapes administratives pour monter, négocier et valoriser votre dossier en fonction des critères attendus par chaque établissement bancaire.</p>
-    </div>
-
-    <div class="atout-card">
-      <img src="pictures/third.png" alt="Icône rapidité">
-      <h3>RAPIDITÉ</h3>
-      <p>Notre savoir-faire vous permet de réaliser votre projet dans un temps record tout en suivant étape par étape l’avancée des négociations.<br>Gain de temps et disponibilité : les maîtres mots de Banquimmo.</p>
-    </div>
-
-    <div class="atout-card">
-      <img src="pictures/last.png" alt="Icône meilleurs taux">
-      <h3>MEILLEURS TAUX</h3>
-      <p>Forts de nos partenariats avec les principaux établissements bancaires de l’agglomération lyonnaise, vous profitez des meilleures conditions disponibles sur le marché.</p>
-    </div>
-  </div>
-</section>
-
-<section class="partenaires">
-  <h2 class="partenaires-title">Nos partenaires</h2>
-  <button class="arrow left">
-    <img src="pictures/left_arrow.png" alt="Flèche gauche">
-  </button>
-  <div class="slider-container">
-
-    <div class="slider">
-      <div class="slide"><img src="pictures/parts/acf.png" alt="ACF"></div>
-      <div class="slide"><img src="pictures/parts/afi.webp" alt="AFI"></div>
-      <div class="slide"><img src="pictures/parts/agm.png" alt="agm"></div>
-      <div class="slide"><img src="pictures/parts/alptis.jpg" alt="alptis"></div>
-      <div class="slide"><img src="pictures/parts/asaf.jpg" alt="asaf"></div>
-      <div class="slide"><img src="pictures/parts/assu.jpg" alt="assu"></div>
-      <div class="slide"><img src="pictures/parts/Banque-Populaire.jpg" alt="Banque-Populaire"></div>
-      <div class="slide"><img src="pictures/parts/bnp.webp" alt="bnp"></div>
-      <div class="slide"><img src="pictures/parts/ca.png" alt="ca"></div>
-      <div class="slide"><img src="pictures/parts/ce.jpg" alt="ce"></div>
-      <div class="slide"><img src="pictures/parts/cmdt.jpg" alt="cmdt"></div>
-      <div class="slide"><img src="pictures/parts/gh.png" alt="gh"></div>
-      <div class="slide"><img src="pictures/parts/wiss.png" alt="wiss"></div>
-      <div class="slide"><img src="pictures/parts/ug.svg" alt="ug"></div>
-      <div class="slide"><img src="pictures/parts/tet.jpeg" alt="tet"></div>
-      <div class="slide"><img src="pictures/parts/spvie.avif" alt="spvie"></div>
-      <div class="slide"><img src="pictures/parts/simp.png" alt="simp"></div>
-      <div class="slide"><img src="pictures/parts/sg.jpg" alt="sg"></div>
-      <div class="slide"><img src="pictures/parts/repa.webp" alt="repa"></div>
-      <div class="slide"><img src="pictures/parts/orus.png" alt="orus"></div>
-      <div class="slide"><img src="pictures/parts/néo.jpg" alt="neo"></div>
-      <div class="slide"><img src="pictures/parts/metlif.png" alt="metlif"></div>
-      <div class="slide"><img src="pictures/parts/lcl.png" alt="lcl"></div>
-      <div class="slide"><img src="pictures/parts/ka.png" alt="ka"></div>
-      <div class="slide"><img src="pictures/parts/hm.jpg" alt="hm"></div>
-    </div>
-
-  </div>
-  <button class="arrow right">
-    <img src="pictures/right_arrow.png" alt="Flèche droite">
-  </button>
-</section>
-
-<section class="temoignages">
-  <div class="avis-widget">
-    <div class="temoignages-header">
-      <h2>Témoignages clients</h2>
-      <p>Ce sont nos clients qui parlent le mieux de nous !</p>
-    </div>
-    <div class="ti-widget"></div>
-    <script defer async src='https://cdn.trustindex.io/loader.js?f9f63124903f8827a557510372'></script>
-  </div>
-</section>
-<br>
-<section class="localisation">
-  <div class="avis-widget">
-    <h2>Nous trouver</h2><br><br><br>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.0041682977167!2d4.960384077100425!3d45.77110671290772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c733a342f4ef%3A0xbb71f41cc409d367!2sBanquimmo%20votre%20courtier!5e0!3m2!1sfr!2sfr!4v1759759628652!5m2!1sfr!2sfr"
-        width="600"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-container">
-
-    <div class="footer-section">
-      <h3>BANQUIMMO</h3>
-      <p>Ambassadeur du Label Made in Courtage.</p><br>
-      <p>Courtier en prêts immobiliers et assurances à Lyon et sa région.</p><br>
-      <p>ORIAS n°14007331 – <a href="https://www.orias.fr" target="_blank">www.orias.fr</a></p><br>
-      <p>Sous le contrôle de l’ACPR – <a href="https://acpr.banque-france.fr" target="_blank">www.acpr.banque-france.fr</a></p><br>
-    </div>
-
-    <div class="footer-section">
-      <h4>Liens utiles</h4>
-      <ul>
-        <li><a href="html/legal_mention.html">Mentions légales</a></li>
-        <li><a href="html/confidentiality_politic.html">Politique de confidentialité</a></li>
-        <li><a href="html/inter_register.html">Registre unique des intermédiaires (assurance, banque, finance)</a></li>
-        <li><a href="mailto:contact@banquimmo.fr?subject=Résiliation%20de%20contrat">Résilier votre contrat</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h4>Nos offres</h4>
-      <ul>
-        <li><a href="#">Prêt immobilier</a></li>
-        <li><a href="#">Rachat de crédit</a></li>
-        <li><a href="#">Prêt travaux</a></li>
-        <li><a href="html/borrower_insurance.html">Assurance emprunteur</a></li>
-        <li><a href="https://banquimmo.parcours.digitalcourtier.com">Assurance</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h4>Contact</h4>
-      <p>253 avenue Jean Jaurès<br>69150 Décines</p>
-      <p>📞 <a href="tel:+33478580487">04 78 58 04 87</a></p>
-      <p>📧 <a href="mailto:contact@banquimmo.fr">contact@banquimmo.fr</a></p>
-      <p>Horaires :</p>
-      <p>Lun-Ven 9h-19h – Samedi sur RDV</p>
-    </div>
-
-    <div class="footer-section">
-      <h4>Suivez-nous</h4>
-      <ul class="socials">
-        <li><a href="https://www.facebook.com/banquimmo/" target="_blank">Facebook</a></li>
-        <li><a href="https://www.linkedin.com/company/banquimmolyon/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.youtube.com/channel/UCeHQWq3tM7MpHAwY2gc2FHA" target="_blank">YouTube</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2024 Banquimmo – Courtier en Prêts Particuliers et Professionnels</p>
-    <p>Avec Banquimmo, obtenez les Meilleurs Taux et Conditions sur Lyon et sa région.</p>
-  </div>
-</footer>
-
-<script src="js/dropdown.js"></script>
-<script src="js/script.js"></script>
-<script src="js/burger.js"></script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>
