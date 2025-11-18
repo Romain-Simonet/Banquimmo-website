@@ -62,3 +62,33 @@
     };
   });
 })();
+
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const submitBtn = document.getElementById("contactSubmit");
+    const status = document.getElementById("contactStatus");
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Envoi en cours...";
+
+    const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form)
+    });
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Envoyer ma demande";
+
+    if (response.ok) {
+        status.classList.remove("hidden");
+        status.textContent = "Message envoyé avec succès !";
+        status.style.color = "green";
+        form.reset();
+    } else {
+        status.classList.remove("hidden");
+        status.textContent = "Erreur lors de l'envoi du message.";
+        status.style.color = "red";
+    }
+});
